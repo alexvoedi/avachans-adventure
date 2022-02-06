@@ -1,31 +1,34 @@
 export default [
   {
     id: 1,
-    title: "Der Wecker klingelt",
+    title: "Die Reise beginnt",
     text: `
-      Ein neuer Tag ist angebrochen. Es ist so schön draußen.
+      Die Sonne geht auf und ein neuer Tag beginnt. Welches Abenteuer wirst du heute erleben?
 
-      Aber was ist das? Da liegt eine Katze auf dem
+      Erstmal musst du deinen Prachtkörper natürlich aus dem Bettchen erheben.
     `,
+    question: "Wie möchtest du heute aufstehen?",
     choices: [
       {
-        text: "Brötchen essen",
-        goto: 2,
+        text: "Aus dem Bett rollen",
+        goto: [2],
       },
       {
-        text: "Pizza von gestern in die Mikrowelle",
-        goto: 3,
+        text: "Es gemütlich angehen",
+        goto: [3],
       },
     ],
   },
   {
     id: 2,
-    title: "1",
-    text: `2`,
+    title: "Kleiner Tollpatsch",
+    text: `
+      Du rollst micht Karacho von der Matratze. Dabei unterschätzt du den Schwung, den du aufgebaut hast und krachst mit dem Kopf gegen die Tür.
+    `,
   },
   {
     id: 3,
-    title: "3",
-    text: `4`,
+    title: "",
+    text: ``,
   },
 ];

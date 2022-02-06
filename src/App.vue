@@ -10,7 +10,11 @@ const currentStep = computed(() => {
   return story.find((step) => step.id === currentId.value);
 });
 
-const selectEvent = (choice: Choice) => (currentId.value = choice.goto);
+const selectEvent = (choice: Choice) => {
+  const gotoIndex = Math.floor(Math.random() * choice.goto.length);
+
+  currentId.value = choice.goto[gotoIndex];
+};
 </script>
 
 <template>
@@ -20,9 +24,12 @@ const selectEvent = (choice: Choice) => (currentId.value = choice.goto);
 
       <div v-html="currentStep.text" class="whitespace-pre-line"></div>
 
-      <div class="italic text-true-gray-400">Was tust du?</div>
+      <div v-if="currentStep.choices" class="space-y-4">
+        <div class="italic text-true-gray-400">
+          <div v-if="currentStep.question" v-html="currentStep.question"></div>
+          <div v-else>currentStep.question</div>
+        </div>
 
-      <div class="space-y-4">
         <button
           v-for="(choice, index) in currentStep.choices"
           :key="index"
@@ -32,6 +39,10 @@ const selectEvent = (choice: Choice) => (currentId.value = choice.goto);
         >
           {{ choice.text }}
         </button>
+      </div>
+
+      <div v-else class="text-red-700 text-3xl text-center font-bold">
+        Du bist gestorben!
       </div>
     </div>
   </div>

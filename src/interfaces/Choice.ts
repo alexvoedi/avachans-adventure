@@ -1,4 +1,5 @@
 export default interface Choice {
   text: string;
-  goto: number;
+  goto: number[];
+  question?: string;
 }
