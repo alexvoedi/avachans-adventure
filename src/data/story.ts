@@ -1,19 +1,31 @@
 export default [
   {
     id: 1,
-    title: "Zeit zum Aufstehen",
-    text: "Du stehst auf. Was machst du?",
+    title: "Der Wecker klingelt",
+    text: `
+      Ein neuer Tag ist angebrochen. Es ist so schön draußen.
+
+      Aber was ist das? Da liegt eine Katze auf dem
+    `,
     choices: [
       {
-        id: 1,
-        text: "Brötchen essen.",
-        event: () => {},
+        text: "Brötchen essen",
+        goto: 2,
       },
       {
-        id: 2,
         text: "Pizza von gestern in die Mikrowelle",
-        event: () => {},
+        goto: 3,
       },
     ],
+  },
+  {
+    id: 2,
+    title: "1",
+    text: `2`,
+  },
+  {
+    id: 3,
+    title: "3",
+    text: `4`,
   },
 ];
