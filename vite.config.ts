@@ -16,7 +16,7 @@ export default defineConfig({
     },
   },
 
-  base: "/minesweeper/",
+  base: "/avachans-adventure/",
 
   plugins: [
     Vue(),
