@@ -14,8 +14,12 @@ export default [
         goto: [2],
       },
       {
-        text: "Es gemütlich angehen",
+        text: "Wie ein normaler Mensch aufstehen",
         goto: [3],
+      },
+      {
+        text: "Ich möchte gar nicht aufstehen und einfach liegen bleiben",
+        goto: [4],
       },
     ],
   },
@@ -28,7 +32,18 @@ export default [
   },
   {
     id: 3,
-    title: "",
+    title: "Kapitel 2",
     text: ``,
+  },
+  {
+    id: 4,
+    title: "Korken in Popo",
+    text: `
+      Du entscheidest dich dazu, im gemütlichen und warmen Bett liegen zu bleiben.
+
+      Plötzlich spürst du, dass du verdammt nochmal heftige Bauchschmerzen hast. Es ist kaum zu ertragen, aber du willst unbedingt im Bett liegen bleiben und so wird der Druck immer größer, bis du explodierst.
+
+      Du hättest dir besser keinen Korken in den Popo stecken sollen!
+    `,
   },
 ];
